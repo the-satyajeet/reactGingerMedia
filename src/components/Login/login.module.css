@@ -16,4 +16,47 @@
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
     padding: 30px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+
+}
+
+.footer button {
+    outline: none;
+    border: none;
+    background-color: #9900ff;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 16px;
+    width: 100%;
+    transition: 100ms;
+    cursor: pointer;
+}
+
+.footer button:hover {
+    background-color: #aa2aff;
+}
+
+.footer p {
+    font-weight: 700;
+    color: #000;
+
+}
+
+.footer p span a {
+    font-weight: bold;
+    color: #9900ff;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
