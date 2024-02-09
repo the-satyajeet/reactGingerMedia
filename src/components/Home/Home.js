@@ -13,6 +13,9 @@ function Home(props) {
       <br />
       <br />
       <h2>{props.name ? `Welcome - ${props.name}` : "Login please"}</h2>
+      <br />
+      <br />
+
     </div>
   )
 }
