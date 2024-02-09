@@ -12,7 +12,7 @@ function Home(props) {
       <br />
       <br />
       <br />
-      <h2>{props.name ? 'Welcome - ${props.name}' : "Login please"}</h2>
+      <h2>{props.name ? `Welcome - ${props.name}` : "Login please"}</h2>
     </div>
   )
 }

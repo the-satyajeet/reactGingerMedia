@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Signup.module.css";
 import InputControl from "../InputControl/InputControl";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
@@ -15,6 +15,7 @@ function Signup() {
   });
 
   const [errorMsg, setErrorMsg] = useState("");
+  const navigate = useNavigate();
   // const [ passMsg, setPassMsg ] = useState("");
   const [submitBtnDisabled, setSubmitBtnDisabled] = useState(false);
 
@@ -26,25 +27,24 @@ function Signup() {
     setErrorMsg("");
     setSubmitBtnDisabled(true);
     createUserWithEmailAndPassword(auth, values.email, values.pass)
-      .then((res) => {
+      .then(async(res) => {
         setSubmitBtnDisabled(false);
-          console.log(res);
-          const user = res.user;
-          updateProfile(user, {
-            displayName: values.name,
-          });
-          console.log(user);
+        console.log(res);
+        const user = res.user;
+        await updateProfile(user, {
+          displayName: values.name,
+        });
+        console.log(user);
+        navigate("/");
       })
       .catch((err) => {
         setSubmitBtnDisabled(false);
-        console.log("Error: ", err.message);
+        // console.log("Error: ", err.message);
         setErrorMsg(err.message);
         // const errCode = err.message;
         // setPassMsg(`${errCode}`);
-
-
       });
-    console.log(values);
+    // console.log(values);
   };
 
   return (
@@ -78,7 +78,9 @@ function Signup() {
 
         <div className={styles.footer}>
           <b className={styles.error}>{errorMsg}</b>
-          <button onClick={handleSubmit} disabled = {submitBtnDisabled}>Sign up</button>
+          <button onClick={handleSubmit} disabled={submitBtnDisabled}>
+            Sign up
+          </button>
           <p>
             Already have an account?{" "}
             <span>
