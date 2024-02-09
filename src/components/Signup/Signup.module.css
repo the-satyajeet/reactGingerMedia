@@ -42,6 +42,12 @@
     cursor: pointer;
 }
 
+.footer button:disabled {
+    background-color: #e6ccff !important;
+    color: #fff;
+    cursor: not-allowed;
+}
+
 .footer button:hover {
     background-color: #aa2aff;
 }
@@ -66,8 +72,5 @@
     font-weight: bold;
 }
 
-.footer button:disabled {
-    background-color: #e6ccff;
-    color: #fff;
-    cursor: not-allowed;
-}
+
+

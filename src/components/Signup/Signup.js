@@ -4,7 +4,7 @@ import InputControl from "../InputControl/InputControl";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../../firebase";
 
 function Signup() {
@@ -15,7 +15,7 @@ function Signup() {
   });
 
   const [errorMsg, setErrorMsg] = useState("");
-  const [ passMsg, setPassMsg ] = useState("");
+  // const [ passMsg, setPassMsg ] = useState("");
   const [submitBtnDisabled, setSubmitBtnDisabled] = useState(false);
 
   const handleSubmit = () => {
@@ -29,12 +29,19 @@ function Signup() {
       .then((res) => {
         setSubmitBtnDisabled(false);
           console.log(res);
+          const user = res.user;
+          updateProfile(user, {
+            displayName: values.name,
+          });
+          console.log(user);
       })
       .catch((err) => {
         setSubmitBtnDisabled(false);
         console.log("Error: ", err.message);
-        const errCode = err.message;
-        setPassMsg(`${errCode}`);
+        setErrorMsg(err.message);
+        // const errCode = err.message;
+        // setPassMsg(`${errCode}`);
+
 
       });
     console.log(values);
@@ -67,7 +74,7 @@ function Signup() {
             setValues((prev) => ({ ...prev, pass: event.target.value }))
           }
         />
-        <b className={styles.error}>{passMsg}</b>
+        {/* <b className={styles.error}>{passMsg}</b> */}
 
         <div className={styles.footer}>
           <b className={styles.error}>{errorMsg}</b>
