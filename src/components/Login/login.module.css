@@ -60,3 +60,14 @@
     text-decoration: none;
 }
 
+.footer button:disabled {
+    background-color: #e6ccff !important;
+    color: #fff;
+    cursor: not-allowed;
+  }
+
+  .error {
+    color: #ff3300;
+    font-size: 0.875rem;
+    font-weight: bold;
+  }
