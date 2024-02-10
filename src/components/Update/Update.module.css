@@ -20,3 +20,30 @@
     flex-direction: column;
     gap: 10px;
   }
+
+  
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+
+}
+
+.footer button {
+  outline: none;
+  border: none;
+  background-color: #9900ff;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 16px;
+  width: 100%;
+  transition: 100ms;
+  cursor: pointer;
+}
+
+.footer button:hover {
+  background-color: #aa2aff;
+}
+

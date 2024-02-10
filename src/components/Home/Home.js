@@ -7,22 +7,15 @@ function Home(props) {
     <div className={styles.container}>
       <div className={styles.innerBox}>
         <div>
-
           <h1>{props.name ? `Welcome - ${props.name}` : "Login please"}</h1>
-          <h2>
-            <Link to="/login">Login</Link>
-          </h2>
+          <h2>{props.name ? "" : <Link to="/login">Login</Link>}</h2>
+          <br />
+          <h2>{props.name ? "" : <Link to="/signup">Signup</Link>}</h2>
+          <br />
+          <h2>{!props.name ? "" : <Link to="/signout">Signout</Link>}</h2>
           <br />
           <h2>
-            <Link to="/signup">Signup</Link>
-          </h2>
-          <br />
-          <h2>
-            <Link to="/signout">Signout</Link>
-          </h2>
-          <br />
-          <h2>
-            <Link to="/update">Update Profile</Link>
+            {!props.name ? " " : <Link to="/update">Update Profile</Link>}
           </h2>
         </div>
       </div>
