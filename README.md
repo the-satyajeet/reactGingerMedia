@@ -13,30 +13,30 @@ Creating Signup, Login, Update Page in react and store the data in database(Fire
 
 # Home
 
-![App Screenshot](Screenshots\home.png)
+![Alt text](https://github.com/the-satyajeet/reactGingerMedia/blob/main/Screenshots/home.png?raw=true "Title")
 
 # Signup
 
-![App Screenshot](Screenshots\signup.png)
+![Alt text](https://github.com/the-satyajeet/reactGingerMedia/blob/main/Screenshots/signup.png?raw=true "Title")
 
 # Login
 
-![App Screenshot](Screenshots\login.png)
+![Alt text](https://github.com/the-satyajeet/reactGingerMedia/blob/main/Screenshots/login.png?raw=true "Title")
 
 # Loggedin
 
-![App Screenshot](Screenshots\loggedin.png)
+![Alt text](https://github.com/the-satyajeet/reactGingerMedia/blob/main/Screenshots/loggedin.png?raw=true "Title")
 
 # Update Profile
 
-![App Screenshot](Screenshots\update.png)
+![Alt text](https://github.com/the-satyajeet/reactGingerMedia/blob/main/Screenshots/update.png?raw=true "Title")
 
 ## 🔗 Links
 
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/the-satyajeet)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/the-satyajeet/)
 
 
 ## Authors
 
-- [@the-satyajeet](https://github.com/the-satyajeet)
+- [@the-satyajeet](https://github.com/the-satyajeet/)
 
