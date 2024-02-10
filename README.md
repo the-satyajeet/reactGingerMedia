@@ -31,6 +31,10 @@ Creating Signup, Login, Update Page in react and store the data in database(Fire
 
 ![Alt text](https://github.com/the-satyajeet/reactGingerMedia/blob/main/Screenshots/update.png?raw=true "Title")
 
+## Deployed Link
+
+https://react-gingermedia.netlify.app/
+
 ## 🔗 Links
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/the-satyajeet/)
